@@ -27,7 +27,7 @@ const PostsList = () => {
                                     role={user?.role}
                                     perform="posts:edit"
                                     data={{
-                                        userId: user.id,
+                                        userId: user?.id,
                                         postOwnerId: post.ownerId
                                     }}
                                     yes={() => (

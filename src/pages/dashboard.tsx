@@ -2,7 +2,6 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { useAuth0 } from '../auth/use-auth0';
 import Can from '../components/can';
-import Logout from '../components/logout';
 import Profile from '../components/profile';
 import PostsList from '../components/post-list';
 
@@ -17,7 +16,6 @@ const DashboardPage = () => {
             yes={() => (
                 <div>
                     <h1>Dashboard</h1>
-                    <Logout />
                     <Profile />
                     <PostsList />
                 </div>

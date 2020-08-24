@@ -6,6 +6,7 @@ const check = (role: string, action: string, data: unknown) => {
     // }
 
     const permissions = rules[role];
+    console.log('Can', permissions, role, action, data);
     if (!permissions) {
         // role is not present in the rules
         return false;

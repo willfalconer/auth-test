@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { BrowserRouter as Router } from "react-router-dom";
 import App from './App';
 import Auth0Provider from './auth/auth0-provider';
 import * as serviceWorker from './serviceWorker';
@@ -13,7 +13,9 @@ ReactDOM.render(
             redirectUri={window.location.origin}
             cacheLocation='localstorage'
         >
-            <App />
+            <Router>
+                <App />
+            </Router>
         </Auth0Provider>
     </React.StrictMode>,
     document.getElementById('root')
