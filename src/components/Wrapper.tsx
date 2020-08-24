@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAuth0 } from './auth/use-auth0';
+import { useAuth0 } from '../auth/use-auth0';
 
 export interface WrapperProps {
     /**

@@ -1,5 +1,5 @@
 import React from "react";
-import { useAuth0 } from "./auth/use-auth0";
+import { useAuth0 } from "../auth/use-auth0";
 
 const Profile = () => {
     const { user, isAuthenticated } = useAuth0();
@@ -42,8 +42,9 @@ const Profile = () => {
             <div>
                 <img src={user.picture} alt={user.name} />
                 <h2>{user.name}</h2>
-                <p>{user.email}</p>
-                {/* <p>{JSON.stringify(userMetadata)}</p> */}
+                <p>ID: {user.id}</p>
+                <p>Email: {user.email}</p>
+                <p>Role: {user.role}</p>
             </div>
         );
     }

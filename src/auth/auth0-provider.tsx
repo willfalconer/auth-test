@@ -224,6 +224,9 @@ const Auth0Provider = (opts: Auth0ProviderOptions): JSX.Element => {
                 }
                 const isAuthenticated = await client.isAuthenticated();
                 const user = isAuthenticated && (await client.getUser());
+                // bring some things up to a level that makes more sense.
+                user.role = user['https://rbac-tutorial-app/role'];
+                user.id = user.sub;
                 dispatch({ type: 'INITIALISED', isAuthenticated, user });
             } catch (error) {
                 dispatch({ type: 'ERROR', error: loginError(error) });

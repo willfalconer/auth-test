@@ -11,6 +11,7 @@ ReactDOM.render(
             domain="donerboy.au.auth0.com"
             clientId="87ME7H9W5HJrA5K4yq59tY7x4nKsU5h5"
             redirectUri={window.location.origin}
+            cacheLocation='localstorage'
         >
             <App />
         </Auth0Provider>
